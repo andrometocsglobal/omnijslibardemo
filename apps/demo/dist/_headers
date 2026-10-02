@@ -1,0 +1,15 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(self), microphone=(self), xr-spatial-tracking=(self), fullscreen=(self), screen-wake-lock=(self), accelerometer=(self), gyroscope=(self), publickey-credentials-get=(self), publickey-credentials-create=(self)
+  X-Frame-Options: DENY
+
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+
+/lib/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600

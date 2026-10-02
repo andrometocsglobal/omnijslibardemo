@@ -1,0 +1,45 @@
+{
+  "name": "@omniballabs/omnidim",
+  "version": "0.1.0",
+  "description": "OMNIDIM JS — omnidimensional formula library in plain JavaScript: OMNIBAL (AP/GP/HP/Geometry), OmniFit, OmniSegment, formula data structures, HORN, OmniCache, persona/identity, hand-gesture and AR helpers. Works with a <script> tag, ES modules and Node.js. Zero runtime dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/omnidim.umd.js",
+  "module": "./dist/omnidim.mjs",
+  "browser": "./dist/omnidim.umd.js",
+  "unpkg": "./dist/omnidim.umd.js",
+  "jsdelivr": "./dist/omnidim.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/omnidim.mjs",
+      "require": "./dist/omnidim.umd.js",
+      "default": "./dist/omnidim.mjs"
+    },
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "omnidimensional",
+    "omnibal",
+    "arithmetic-progression",
+    "faulhaber",
+    "formula-compression",
+    "data-structures",
+    "big-o",
+    "webxr",
+    "hand-gesture"
+  ],
+  "devDependencies": {
+    "vite": "^7.3.6",
+    "vitest": "^4.1.11"
+  }
+}

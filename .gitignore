@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+*.log
+.vite/
+coverage/
+.netlify/
+
+# generated at build time by scripts/copy-lib.mjs (the built site in apps/demo/dist is committed)
+apps/demo/public/lib/
+apps/demo/public/mediapipe/
+
+# local working notes — not published
+PROMPT.md

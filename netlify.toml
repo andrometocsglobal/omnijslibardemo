@@ -1,0 +1,36 @@
+# Netlify — static, client-side only. No functions, no server APIs.
+#
+# Option A (Git deploy): Netlify runs the build below.
+# Option B (drag & drop): drop the prebuilt folder `apps/demo/dist`
+#                          onto https://app.netlify.com/drop
+#   (_redirects and _headers inside that folder configure routing & headers)
+
+[build]
+  command = "npm ci && npm run build"
+  publish = "apps/demo/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(self), microphone=(self), xr-spatial-tracking=(self), fullscreen=(self), screen-wake-lock=(self), accelerometer=(self), gyroscope=(self), publickey-credentials-get=(self), publickey-credentials-create=(self)"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/lib/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

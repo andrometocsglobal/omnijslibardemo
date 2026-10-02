@@ -1,0 +1,21 @@
+{
+  "name": "omnijslibardemo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "OMNIDIM JS — omnidimensional formula library (plain JavaScript, <script>-ready) and a client-side React AR / hand-gesture console demo.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:lib": "npm run build -w @omniballabs/omnidim",
+    "build:demo": "npm run build -w omnidim-demo",
+    "build": "npm run build:lib && npm run build:demo",
+    "dev": "npm run build:lib && npm run dev -w omnidim-demo",
+    "test": "npm test -w @omniballabs/omnidim"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "OMNIDIM JS — Omnidimensional Holo Console",
+  "short_name": "OMNIDIM",
+  "description": "Omnidimensional formulas, hand-gesture holo console, 3D human, 4D parallel reality and 5D AR — fully client-side.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "categories": ["productivity", "education", "utilities"],
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Holo Console", "short_name": "Console", "url": "/console", "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }] },
+    { "name": "Formula Lab", "short_name": "Formulas", "url": "/formulas", "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }] },
+    { "name": "5D AR", "short_name": "AR", "url": "/ar", "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }] },
+    { "name": "4D Parallel Reality", "short_name": "4D", "url": "/parallel", "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }] }
+  ],
+  "share_target": {
+    "action": "/omnifit",
+    "method": "GET",
+    "params": { "title": "title", "text": "text", "url": "url" }
+  },
+  "file_handlers": [
+    { "action": "/omnifit", "accept": { "text/csv": [".csv"], "text/plain": [".txt"], "application/json": [".json"] } }
+  ]
+}
