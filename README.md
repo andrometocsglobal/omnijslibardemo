@@ -70,6 +70,7 @@ npm run build       # library + app → apps/demo/dist
 ## 4. Deploy to Netlify (static only)
 
 - **Git:** import this repo. `netlify.toml` builds with `npm ci && npm run build` and publishes `apps/demo/dist`.
+- **Monorepo settings:** the build base is explicitly the repository root (`.`), so both the library and demo workspace build before publishing. The publish directory is `apps/demo/dist` relative to that root, not relative to `packages/omnidim`.
 - **Drag & drop:** drop the prebuilt `apps/demo/dist` folder on https://app.netlify.com/drop.
 
 See [docs/10-pwa-android-netlify.md](docs/10-pwa-android-netlify.md) for Android install and the PWA feature list.

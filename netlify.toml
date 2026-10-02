@@ -6,6 +6,7 @@
 #   (_redirects and _headers inside that folder configure routing & headers)
 
 [build]
+  base = "."
   command = "npm ci && npm run build"
   publish = "apps/demo/dist"
 
